@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="mb-4">계산기</h1>
+<form method="POST" action="/calculator" class="row g-3">
+  <div class="col-auto">
+    <input type="number" class="form-control" name="num1" step="any" required />
+  </div>
+  <div class="col-auto">
+    <select class="form-select" name="op">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <input type="number" class="form-control" name="num2" step="any" required />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-success">계산</button>
+  </div>
+</form>
+
+{% if result is not none %}
+<div class="alert alert-info mt-4">결과: <strong>{{ result }}</strong></div>
+{% endif %} {% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<div class="text-center">
+  <h1 class="mb-4">홈 페이지</h1>
+  <p class="lead">Flask로 만든 멀티 메뉴 웹서비스입니다.</p>
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">구구단</h5>
+          <p class="card-text">입력한 단의 구구단을 보여줍니다.</p>
+          <a href="/gugudan" class="btn btn-primary">이동</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">계산기</h5>
+          <p class="card-text">간단한 사칙연산 계산기입니다.</p>
+          <a href="/calculator" class="btn btn-success">이동</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
